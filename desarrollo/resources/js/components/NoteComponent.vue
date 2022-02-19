@@ -32,7 +32,9 @@
                     description: this.description
                 };
                 axios.post('/notes', params)
-                .then((response) => console.log(response));
+                .then((response) => 
+                    this.description = ''
+                );
             }
         }
     }

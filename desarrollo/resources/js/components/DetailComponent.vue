@@ -24,7 +24,11 @@
             }
         },
         mounted() {
-
+            axios.get('/notes')
+                .then((response) => 
+                    //response.data.forEach(element => console.log(element))
+                    this.array_notes = response.data
+                );
         }
     }
 </script>
